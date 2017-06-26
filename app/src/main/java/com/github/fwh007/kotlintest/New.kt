@@ -6,9 +6,10 @@ package com.github.fwh007.kotlintest
  * @author : Winter
  */
 data class New(
+        val item_id: Long,
         val title: String,
         val abstract: String,
         val source: String,
         val image_url: String,
-        val item_seo_url: String
+        val content: String
 )
