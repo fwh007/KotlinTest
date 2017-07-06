@@ -1,7 +1,6 @@
 package com.github.fwh007.kotlintest
 
 import com.github.fwh007.kotlintest.view.BaseFragment
-import org.jetbrains.anko.toast
 
 class MainActivity : android.support.v7.app.AppCompatActivity() {
 
@@ -36,10 +35,6 @@ class MainActivity : android.support.v7.app.AppCompatActivity() {
                 .addToBackStack(null)
                 .replace(R.id.fl_fragment, fragment, fragment.javaClass.simpleName)
                 .commit()
-
-        val ff = fun(gg:Int):Int = gg*2
-
-        toast(ff(33).toString())
     }
 
     fun a() = fun(c: Int) = c + 1

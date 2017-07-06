@@ -7,10 +7,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebSettings
+import android.webkit.WebView
+import android.widget.TextView
 import com.github.fwh007.kotlintest.R
 import com.github.fwh007.kotlintest.model.New
 import com.github.fwh007.kotlintest.viewmodel.NewDetailViewModel
-import kotlinx.android.synthetic.main.fragment_new_detail.*
+import kotterknife.bindView
 
 
 /**
@@ -26,6 +28,10 @@ class NewDetailFragment : BaseFragment() {
             return fragment
         }
     }
+
+    val titleTV: TextView by bindView(R.id.titleTV)
+    val sourceTV: TextView by bindView(R.id.sourceTV)
+    val webView: WebView by bindView(R.id.webView)
 
     lateinit var mViewModel: NewDetailViewModel
     lateinit var mNew: New
